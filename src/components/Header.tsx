@@ -1,7 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/azikels-logo.png.asset.json";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
 
@@ -34,22 +33,28 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled || open
-          ? "bg-charcoal/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(212,175,110,0.25)]"
+          ? "border-b border-gold/15 bg-charcoal/96 shadow-[0_18px_50px_-35px_rgba(0,0,0,0.7)] backdrop-blur-xl"
           : "bg-transparent",
       )}
     >
       <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:px-8 lg:py-4">
         <Link to="/" className="flex min-w-0 items-center gap-3">
           <img
-            src={logo.url}
+            src="/logo.png"
             alt="Azikel's Tasty Food"
             width={56}
             height={56}
             className={cn(
-              "h-11 w-11 shrink-0 rounded-full object-cover transition-all duration-500 sm:h-14 sm:w-14",
+              "h-12 w-12 shrink-0 rounded-full object-cover ring-1 ring-gold/25 transition-all duration-500 sm:h-14 sm:w-14",
             )}
           />
           <span className="sr-only">Azikel's Tasty Food</span>
+          <span className="hidden flex-col leading-tight text-cream sm:flex">
+            <span className="text-sm tracking-[0.22em]">AZIKEL'S</span>
+            <span className="text-[0.72rem] uppercase tracking-[0.28em] text-cream/55">
+              Tasty Food
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
@@ -87,7 +92,7 @@ export function Header() {
       <div
         id="mobile-nav"
         className={cn(
-          "overflow-hidden border-t border-gold/20 bg-charcoal transition-[max-height,opacity] duration-500 lg:hidden",
+          "overflow-hidden border-t border-gold/20 bg-charcoal/98 transition-[max-height,opacity] duration-500 lg:hidden",
           open ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0",
         )}
       >
@@ -105,7 +110,7 @@ export function Header() {
           ))}
           <Link
             to="/contact"
-            className="mt-6 min-h-11 rounded-xs bg-gold px-6 py-3 text-center text-[0.78rem] uppercase tracking-[0.18em] text-charcoal"
+            className="mt-6 min-h-11 rounded-full bg-gold px-6 py-3 text-center text-[0.78rem] uppercase tracking-[0.18em] text-charcoal"
           >
             Get a Quote
           </Link>

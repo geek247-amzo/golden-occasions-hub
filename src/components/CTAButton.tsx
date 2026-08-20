@@ -3,15 +3,15 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const base =
-  "inline-flex items-center justify-center gap-2 min-h-11 px-7 py-3 text-[0.78rem] uppercase tracking-[0.18em] transition-all duration-300 rounded-xs";
+  "inline-flex items-center justify-center gap-2 min-h-11 px-6 py-3 text-[0.76rem] uppercase tracking-[0.2em] transition-all duration-300 rounded-full";
 
 const variants = {
-  gold: "bg-gold text-charcoal hover:bg-gold-soft hover:shadow-[0_10px_30px_-12px_var(--gold)]",
+  gold: "bg-gold text-charcoal shadow-[0_10px_24px_-14px_rgba(214,179,108,0.9)] hover:bg-gold-soft hover:shadow-[0_14px_28px_-14px_rgba(214,179,108,0.95)]",
   dark: "bg-charcoal text-cream hover:bg-charcoal-soft",
   outlineLight:
-    "border border-cream/45 text-cream hover:border-gold hover:text-gold",
+    "border border-cream/35 text-cream hover:border-gold hover:text-gold",
   outlineDark:
-    "border border-charcoal/25 text-charcoal hover:border-gold hover:text-charcoal/70",
+    "border border-charcoal/18 text-charcoal hover:border-gold hover:text-charcoal/80",
 } as const;
 
 type Props = {

@@ -10,12 +10,12 @@ export type Service = {
   heading: string;
   short: string;
   body: string;
-  points?: string[];
-  note?: string;
+  points: string[];
   cta: string;
   whatsapp: string;
   image: string;
   alt: string;
+  reverse?: boolean;
 };
 
 export const services: Service[] = [
@@ -24,8 +24,9 @@ export const services: Service[] = [
     name: "Catering",
     heading: "Catering Made for the Occasion",
     short:
-      "Food and catering solutions tailored to the occasion and guest requirements.",
-    body: "Catering is built around your function — the style of the event, the number of guests and what matters most to the people you're feeding. We discuss menu direction, service style and presentation with you before anything is confirmed, so the food on the day suits the occasion rather than a fixed template.",
+      "Food and catering solutions tailored to the occasion, guest count and requirements of the client.",
+    body:
+      "Catering is shaped around your event rather than a fixed package. We discuss the style of service, the number of guests and the atmosphere you want to create, then align the food and presentation with that brief.",
     points: [
       "Menu direction shaped around the event",
       "Buffet, plated or grazing-style service",
@@ -36,14 +37,15 @@ export const services: Service[] = [
     whatsapp:
       "Hi Azikel's Tasty Food, I'd like to enquire about catering for an upcoming event.",
     image: catering,
-    alt: "Buffet catering spread of grilled meats, salads and warm dishes on a dark table with gold serving spoons",
+    alt: "Elegant buffet spread with grilled meats, salads and warm dishes on a dark table",
   },
   {
     id: "event-planning",
     name: "Event Planning",
     heading: "Bringing Every Detail Together",
     short: "Helping clients coordinate the details that bring an event together.",
-    body: "An event is a hundred small decisions. We help you work through them calmly and in order, so the day itself feels effortless. The areas below are the ones most often discussed during a consultation — we'll confirm together exactly what you'd like us to take on.",
+    body:
+      "Event planning is about helping you make the right decisions in the right order. During consultation we can discuss the moving parts that matter most and shape a practical approach around your occasion.",
     points: [
       "Event coordination",
       "Venue considerations",
@@ -52,12 +54,11 @@ export const services: Service[] = [
       "Guest requirements",
       "Supplier coordination",
     ],
-    note: "Scope is agreed during consultation and tailored to each event.",
     cta: "Plan Your Event",
     whatsapp:
       "Hi Azikel's Tasty Food, I'd like to enquire about event planning support.",
     image: planning,
-    alt: "Hands placing a calligraphed name card on an elegant event table with white florals and gold cutlery",
+    alt: "Place cards and florals arranged on an elegant event table with gold accents",
   },
   {
     id: "weddings",
@@ -65,7 +66,8 @@ export const services: Service[] = [
     heading: "Your Day. Beautifully Brought Together.",
     short:
       "Catering and event support for one of life's most important celebrations.",
-    body: "From the first tasting conversation to the last plate cleared, we look after the parts of your wedding day that guests remember most — the food, the table, the timing and the warmth of the service. Traditional, contemporary or a blend of both, the day is built around you.",
+    body:
+      "Weddings need warmth, timing and polish. We focus on the food, the table, the flow of service and the small touches that help your celebration feel calm, generous and memorable.",
     points: [
       "Wedding catering and service",
       "Table and buffet presentation",
@@ -76,14 +78,16 @@ export const services: Service[] = [
     whatsapp:
       "Hi Azikel's Tasty Food, I'd like to enquire about catering/event planning for my wedding.",
     image: wedding,
-    alt: "Newly married couple laughing together at a candlelit wedding reception table",
+    alt: "Newlyweds celebrating at a softly lit wedding reception table",
+    reverse: true,
   },
   {
     id: "birthdays",
     name: "Birthdays",
     heading: "Celebrate Your Way",
     short: "From intimate birthday dinners to larger milestone celebrations.",
-    body: "Birthdays should feel personal. Whether it's a children's party in the garden, a relaxed family lunch or a milestone celebration with everyone you love in one room, we handle the food and setup so you can enjoy your own party.",
+    body:
+      "Birthday celebrations should feel personal. Whether you're hosting a family meal, a milestone celebration or a joyful gathering with friends, we can support the food and planning so you can enjoy the day.",
     points: [
       "Children's birthdays",
       "Adult birthdays",
@@ -95,7 +99,7 @@ export const services: Service[] = [
     whatsapp:
       "Hi Azikel's Tasty Food, I'd like to enquire about catering for a birthday celebration.",
     image: birthday,
-    alt: "Family and friends applauding around a decorated birthday cake at an elegant outdoor table",
+    alt: "Family and friends gathered around a decorated birthday cake at an elegant table",
   },
   {
     id: "corporate",
@@ -103,7 +107,8 @@ export const services: Service[] = [
     heading: "Professional Events Without the Stress",
     short:
       "Professional catering and event solutions for businesses and organisations.",
-    body: "Corporate catering runs on reliability: arriving when we said we would, presenting well, and feeding your people properly without disrupting the agenda. We work with businesses and organisations across Gauteng on functions of all sizes.",
+    body:
+      "Corporate catering needs to be reliable, neat and efficient. We work with businesses on functions that need to feel polished without disrupting the agenda or the people attending.",
     points: [
       "Business lunches",
       "Staff functions",
@@ -116,6 +121,7 @@ export const services: Service[] = [
     whatsapp:
       "Hi Azikel's Tasty Food, I'd like to enquire about corporate catering for our company.",
     image: corporate,
-    alt: "Guests in business attire at a corporate function beside a canapé catering station",
+    alt: "Professionally dressed guests at a corporate function beside a catering station",
+    reverse: true,
   },
 ];

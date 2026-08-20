@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/azikels-logo.png.asset.json";
 import { addressLines, site } from "@/lib/site";
 
 const pages = [
@@ -18,23 +17,22 @@ const serviceLinks = [
   "Corporate Functions",
 ];
 
-/* Social profiles are hidden until real accounts are supplied.
-   Add entries here (e.g. { label: "Instagram", href: "..." }) to show them. */
+/* Social profiles are hidden until real accounts are supplied. */
 const socials: { label: string; href: string }[] = [];
 
 export function Footer() {
   return (
     <footer className="bg-charcoal text-cream">
       <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.1fr]">
           <div>
             <img
-              src={logo.url}
+              src="/logo.png"
               alt="Azikel's Tasty Food"
               width={72}
               height={72}
               loading="lazy"
-              className="h-16 w-16 rounded-full object-cover"
+              className="h-16 w-16 rounded-full object-cover ring-1 ring-gold/20"
             />
             <h2 className="mt-5 text-2xl text-cream">Azikel's Tasty Food</h2>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/60">
@@ -90,9 +88,7 @@ export function Footer() {
                   {site.email}
                 </a>
               </li>
-              <li className="pt-1 leading-relaxed">
-                {addressLines.slice(1, 4).join(", ")}
-              </li>
+              <li className="pt-1 leading-relaxed">{addressLines.slice(0, 4).join(", ")}</li>
             </ul>
             {socials.length > 0 ? (
               <ul className="mt-6 flex gap-4">
@@ -114,7 +110,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-cream/10 pt-6 text-center text-xs tracking-wide text-cream/45">
-          © {new Date().getFullYear()} Azikel's Tasty Food. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Azikel's Tasty Food. All Rights Reserved.
         </div>
       </div>
     </footer>

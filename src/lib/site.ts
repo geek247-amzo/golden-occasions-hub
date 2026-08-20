@@ -1,6 +1,7 @@
 export const site = {
   name: "Azikel's Tasty Food",
   tagline: "Made with love, served with pride.",
+  location: "Bluehills, Midrand, Gauteng",
   phoneDisplay: "069 052 7523",
   phoneHref: "tel:+27690527523",
   whatsappNumber: "27690527523",

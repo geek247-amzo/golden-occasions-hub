@@ -110,7 +110,15 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-cream/10 pt-6 text-center text-xs tracking-wide text-cream/45">
-          &copy; {new Date().getFullYear()} Azikel's Tasty Food. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Azikel's Tasty Food. All Rights Reserved.{" "}
+          <a
+            href="https://cloudmonkey.co.za"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream/70 underline decoration-cream/25 underline-offset-4 transition-colors hover:text-gold"
+          >
+            Developed by CloudMonkey.co.za
+          </a>
         </div>
       </div>
     </footer>

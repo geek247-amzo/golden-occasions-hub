@@ -836,15 +836,12 @@ The secondary conversion goal is:
 
 ### WhatsApp Azikel's Tasty Food
 
-This project was built with [Lovable](https://lovable.dev).
+This project is maintained as a standard TanStack Start and Vite application.
 
-## Build with Lovable
+## Development
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/5daa0ef1-bf68-45d0-9dcf-c59f7856df14).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Use the scripts in `package.json` to run, build, preview, lint, and format the
+site locally.
 
 ## Development
 

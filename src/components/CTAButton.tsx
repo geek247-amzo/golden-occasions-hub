@@ -20,15 +20,10 @@ type Props = {
   className?: string;
 };
 
-export function CTALink({
-  to,
-  hash,
-  ...props
-}: Props & { to: string; hash?: string }) {
+export function CTALink({ to, ...props }: Props & { to: string }) {
   return (
     <Link
       to={to}
-      hash={hash}
       className={cn(base, variants[props.variant ?? "gold"], props.className)}
     >
       {props.children}
